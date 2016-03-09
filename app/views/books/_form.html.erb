@@ -1,9 +1,6 @@
 <div class="container">
-    <div class="image">
-      <div><%= image_tag(@book.photo_url) %></div>
-    </div>
     <div class="details">
-      <h2>Update <%= @book.title %></h2>
+      <h2>Add New Book</h2>
       <% if @book.errors.any? %>
         <% @book.errors.full_messages.each do |error| %>
           <p class="alert alert-danger"><strong>Input Error: <%= error %></strong></p>
@@ -13,16 +10,28 @@
       <%= form_for @book do |book| %>
 
         <div class="form-group">
+          <%= book.label :photo_url %>
+          <%= book.text_field :photo_url, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= book.label :title %>
+          <%= book.text_field :title, class: "form-control" %>
+        </div>
+
+        <%= book.label :author_id %>
+        <%= book.collection_select(:author_id, Author.all.order("last_name asc"), :id, :full_name, {prompt: "Select Author"}) %>
+
+        <div class="form-group">
           <%= book.label :price %>
           <%= book.text_field :price, class: "form-control" %>
         </div>
 
         <div class="">
-          <%= book.submit "Update Price", class: "btn btn-primary" %>
+          <%= book.submit "Add New Book", class: "btn btn-primary" %>
         </div>
 
       <% end %>
-      <h2><div><%= link_to "Delete Entry", book_path(id: @book.id), method: :delete, data: {confirm: "Delete book entry?"}, class:"btn btn-danger" %></div></h2>
       <hr>
     </div>
 </div>

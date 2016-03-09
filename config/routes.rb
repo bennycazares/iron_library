@@ -8,11 +8,8 @@ get 'books/:id/edit' => 'books#edit', as: :edit_book
 patch 'books/:id' => 'books#update'
 delete 'books/:id' => 'books#delete'
 
-# get 'authors' => 'authors#index', as: :authors
-# get 'authors/new' => 'authors#new', as: :new_author
-# get 'authors/:id' => 'authors#show', as: :author
-# post 'authors' => 'authors#create'
-# delete 'authors/:id' => 'authors#delete'
-# get 'authors/edit'
-# get 'authors/update'
+get 'authors' => 'authors#index', as: :authors
+get 'authors/new' => 'authors#new', as: :new_author
+get 'authors/:id' => 'authors#show', as: :author
+
 end
