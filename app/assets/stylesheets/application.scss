@@ -1,0 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "authors";
+@import "books";
+
+.row {
+  display: flex;
+  width: 100%;
+}
+a {
+  color: #9D9D9D;
+}
