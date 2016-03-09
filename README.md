@@ -1,7 +1,9 @@
-# Iron_Library
+# Iron Library
 
 This application acts as a library storing books and authors. Users have the ability to add, edit, and delete books. The application is styled with bootstrap.
+![Alt text](/Users/Benny/Desktop/theironyard/rails/iron_library/app/assets/images/screenshot.png?raw=true "Optional Title")
 
+# License
 The MIT License (MIT)
 
 Copyright (c) 2016 Benny Cazares
