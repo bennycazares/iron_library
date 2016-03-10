@@ -4984,3 +4984,62 @@ Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Kelly"], ["last_name", "Starrett"], ["bio", "\n  Performance is what drives us as human beings, but dysfunctional movement patterns can bring the human body to an abrupt halt. Often, the factors that impede performance are invisible even to seasoned athletes and coaches.\n  Becoming a Supple Leopard makes the invisible visible. Whether you are a professional athlete,\n  a weekend warrior, or simply someone wanting to live healthy and free from physical restrictions,\n  this one-of-a-kind training manual will teach you how to harness your athletic potential and maintain your body.\n  "], ["created_at", "2016-03-10 04:27:21.406291"], ["updated_at", "2016-03-10 04:27:21.406291"]]
   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-03-09 22:42:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 292ms (Views: 279.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-d31291025a6b734e0b7d44f345d944ae1b6ea6ec0570d9b14d66a207f2454c5f.css?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/authors" for ::1 at 2016-03-09 22:42:32 -0600
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 54ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-03-09 22:42:33 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered authors/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for ::1 at 2016-03-09 22:42:34 -0600
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/3" for ::1 at 2016-03-09 22:42:35 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered authors/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.1ms)
