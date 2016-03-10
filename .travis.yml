@@ -13,3 +13,5 @@ deploy:
   app: iron-library
   on:
     repo: bennycazares/iron_library
+  run:
+    - "rake db:migrate"
