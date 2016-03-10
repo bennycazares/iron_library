@@ -1,4 +1,12 @@
 class BooksController < ApplicationController
+  before_action do
+    
+   user_passcode = session[:passcode]
+   if user_passcode.blank?
+     redirect_to sign_in_path
+   end
+ end
+
   def index
      @books = Book.all
   end
