@@ -4778,3 +4778,268 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:03:33 -0600
+
+
+Started GET "/" for ::1 at 2016-03-09 22:26:04 -0600
+
+Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
+  activerecord (4.2.5.2) lib/active_record/connection_adapters/connection_specification.rb:177:in `rescue in spec'
+  activerecord (4.2.5.2) lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+  activerecord (4.2.5.2) lib/active_record/connection_handling.rb:50:in `establish_connection'
+  activerecord (4.2.5.2) lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:44:in `each'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+  activerecord (4.2.5.2) lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+  activerecord (4.2.5.2) lib/active_record/base.rb:26:in `<top (required)>'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:274:in `require'
+  activerecord (4.2.5.2) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5.2) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.1ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-09 22:26:26 -0600
+
+Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
+  activerecord (4.2.5.2) lib/active_record/connection_adapters/connection_specification.rb:177:in `rescue in spec'
+  activerecord (4.2.5.2) lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+  activerecord (4.2.5.2) lib/active_record/connection_handling.rb:50:in `establish_connection'
+  activerecord (4.2.5.2) lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:44:in `each'
+  activesupport (4.2.5.2) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+  activerecord (4.2.5.2) lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+  activerecord (4.2.5.2) lib/active_record/base.rb:26:in `<top (required)>'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.5.2) lib/active_support/dependencies.rb:274:in `require'
+  activerecord (4.2.5.2) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5.2) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.5ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.2ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-09 22:27:04 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 325ms (Views: 312.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-d31291025a6b734e0b7d44f345d944ae1b6ea6ec0570d9b14d66a207f2454c5f.css?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:27:04 -0600
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "authors"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "books"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "photo_url" varchar, "price" integer, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  DROP TABLE "authors"
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.2ms)[0m  DROP TABLE "books"
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "photo_url" varchar, "price" integer, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160309053206')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160309052036')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("title", "photo_url", "price", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "First: What It Takes to Win"], ["photo_url", "http://ecx.images-amazon.com/images/I/51jAeKg9tvL._SX331_BO1,204,203,200_.jpg"], ["price", 9], ["author_id", 1], ["created_at", "2016-03-10 04:27:21.367505"], ["updated_at", "2016-03-10 04:27:21.367505"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("title", "photo_url", "price", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Olympic Weightlifting: A Complete Guide for Athletes & Coaches"], ["photo_url", "http://ecx.images-amazon.com/images/I/51aK7NCwr0L._SX385_BO1,204,203,200_.jpg"], ["price", 40], ["author_id", 2], ["created_at", "2016-03-10 04:27:21.373214"], ["updated_at", "2016-03-10 04:27:21.373214"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("title", "photo_url", "price", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Deskbound: Standing Up to a Sitting World"], ["photo_url", "http://ecx.images-amazon.com/images/I/51kCH2YDGNL._SX398_BO1,204,203,200_.jpg"], ["price", 21], ["author_id", 3], ["created_at", "2016-03-10 04:27:21.378877"], ["updated_at", "2016-03-10 04:27:21.378877"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("title", "photo_url", "price", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Becoming a Supple Leopard 2nd Edition: The Ultimate Guide to Resolving Pain, Preventing Injury, and Optimizing Athletic Performance"], ["photo_url", "http://ecx.images-amazon.com/images/I/51j6OH4qYhL._SX389_BO1,204,203,200_.jpg"], ["price", 36], ["author_id", 4], ["created_at", "2016-03-10 04:27:21.382597"], ["updated_at", "2016-03-10 04:27:21.382597"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rich"], ["last_name", "Froning Jr"], ["bio", "\n  Reigning CrossFit World Champion Rich Froning is “The Fittest Man on Earth.” He’s fast. He’s strong. And he’s incredibly disciplined.\n  But it takes more than physical strength to compete and win at an elite level.\n  It takes incredible mental and spiritual toughness as well. And it is the precise balance of all three that makes Rich Froning a champion.\n  "], ["created_at", "2016-03-10 04:27:21.397983"], ["updated_at", "2016-03-10 04:27:21.397983"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Greg"], ["last_name", "Everett"], ["bio", "\n  Since shortly after its original release in 2008, Olympic Weightlifting:\n  A Complete Guide for Athletes & Coaches has been the most popular book\n  on the sport of weightlifting in the world and has become the standard text\n  for learning and teaching the snatch and clean & jerk.\n  "], ["created_at", "2016-03-10 04:27:21.400930"], ["updated_at", "2016-03-10 04:27:21.400930"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Juliet"], ["last_name", "Starrett"], ["bio", "\n  Sitting can wreak havoc on your health, and not just in the form of minor aches and pains. Recent studies show that too much sitting contributes to a host of diseases—from obesity and diabetes to cancer and depression.\n  The typical seated office worker suffers from more musculoskeletal injuries than those workers who do daily manual labor.\n  It turns out that sitting is as much an occupational risk as is lifting heavy weights on the job. The facts are in: sitting literally shortens your life. Your chair is your enemy, and it is murdering your body.\n  "], ["created_at", "2016-03-10 04:27:21.403766"], ["updated_at", "2016-03-10 04:27:21.403766"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Kelly"], ["last_name", "Starrett"], ["bio", "\n  Performance is what drives us as human beings, but dysfunctional movement patterns can bring the human body to an abrupt halt. Often, the factors that impede performance are invisible even to seasoned athletes and coaches.\n  Becoming a Supple Leopard makes the invisible visible. Whether you are a professional athlete,\n  a weekend warrior, or simply someone wanting to live healthy and free from physical restrictions,\n  this one-of-a-kind training manual will teach you how to harness your athletic potential and maintain your body.\n  "], ["created_at", "2016-03-10 04:27:21.406291"], ["updated_at", "2016-03-10 04:27:21.406291"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-03-09 22:42:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 292ms (Views: 279.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-d31291025a6b734e0b7d44f345d944ae1b6ea6ec0570d9b14d66a207f2454c5f.css?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-09 22:42:30 -0600
+
+
+Started GET "/authors" for ::1 at 2016-03-09 22:42:32 -0600
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 54ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-03-09 22:42:33 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered authors/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for ::1 at 2016-03-09 22:42:34 -0600
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/3" for ::1 at 2016-03-09 22:42:35 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered authors/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.1ms)

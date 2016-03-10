@@ -1,0 +1,455 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:30:00.474960"], ["updated_at", "2016-03-10 05:30:00.474960"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:30:00 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3191ms (Views: 3173.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:30:49.091788"], ["updated_at", "2016-03-10 05:30:49.091788"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:30:49 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 185ms (Views: 169.6ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:30:49 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (28.2ms)
+  Rendered books/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:33:09.169646"], ["updated_at", "2016-03-10 05:33:09.169646"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:33:09 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 185ms (Views: 170.3ms | ActiveRecord: 0.1ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:33:09 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (26.1ms)
+  Rendered books/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:33:09 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:33:09.439940"], ["updated_at", "2016-03-10 05:33:09.439940"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:33:09 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:33:09 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:33:39.417291"], ["updated_at", "2016-03-10 05:33:39.417291"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:33:39 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 188ms (Views: 171.1ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:33:39 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (24.8ms)
+  Rendered books/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 42ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:33:39 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:33:39.697484"], ["updated_at", "2016-03-10 05:33:39.697484"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:33:39 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:33:39 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:36:27.593103"], ["updated_at", "2016-03-10 05:36:27.593103"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:36:27 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 187ms (Views: 172.9ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:36:27 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (26.4ms)
+  Rendered books/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 45ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:36:27 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:36:27.863090"], ["updated_at", "2016-03-10 05:36:27.863090"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:36:27 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:36:27 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:37:29.468279"], ["updated_at", "2016-03-10 05:37:29.468279"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:37:29 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 179ms (Views: 165.7ms | ActiveRecord: 0.1ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:37:29 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (24.9ms)
+  Rendered books/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 43ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:37:29 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:37:29.721774"], ["updated_at", "2016-03-10 05:37:29.721774"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:37:29 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:37:29 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:38:54.322848"], ["updated_at", "2016-03-10 05:38:54.322848"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:38:54 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 186ms (Views: 175.9ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:38:54 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (25.7ms)
+  Rendered books/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:38:54 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:38:54.590232"], ["updated_at", "2016-03-10 05:38:54.590232"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:38:54 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:38:54 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:39:10.390260"], ["updated_at", "2016-03-10 05:39:10.390260"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:39:10 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 183ms (Views: 171.7ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:39:10 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (26.5ms)
+  Rendered books/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 45ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:39:10 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:39:10.654062"], ["updated_at", "2016-03-10 05:39:10.654062"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:39:10 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:39:10 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 20ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:41:09.221920"], ["updated_at", "2016-03-10 05:41:09.221920"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:41:09 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 186ms (Views: 171.9ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:41:09 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (24.4ms)
+  Rendered books/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 42ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:41:09 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:41:09.485460"], ["updated_at", "2016-03-10 05:41:09.485460"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:41:09 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:41:09 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:52:36.043074"], ["updated_at", "2016-03-10 05:52:36.043074"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:52:36 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 187ms (Views: 170.4ms | ActiveRecord: 0.3ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:52:36 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (26.7ms)
+  Rendered books/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 45ms (Views: 37.6ms | ActiveRecord: 0.4ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:52:36 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:52:36.307632"], ["updated_at", "2016-03-10 05:52:36.307632"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:52:36 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:52:36 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:53:56.991588"], ["updated_at", "2016-03-10 05:53:56.991588"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:53:56 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 184ms (Views: 170.9ms | ActiveRecord: 0.1ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:53:57 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (25.8ms)
+  Rendered books/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 43ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:53:57 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Title", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Title"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:53:57.255718"], ["updated_at", "2016-03-10 05:53:57.255718"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:53:57 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:53:57 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:54:33.426763"], ["updated_at", "2016-03-10 05:54:33.426763"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:54:33 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 188ms (Views: 174.5ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:54:33 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (26.6ms)
+  Rendered books/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 45ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:54:33 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Book", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Book"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:54:33.697033"], ["updated_at", "2016-03-10 05:54:33.697033"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:54:33 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:54:33 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------
+AddBookTest: test_add_book
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("first_name", "last_name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Bob"], ["last_name", "Hope"], ["bio", "not very interesting"], ["created_at", "2016-03-10 05:57:40.608421"], ["updated_at", "2016-03-10 05:57:40.608421"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:57:40 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 182ms (Views: 170.5ms | ActiveRecord: 0.2ms)
+Started GET "/books/new" for 127.0.0.1 at 2016-03-09 23:57:40 -0600
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"  ORDER BY last_name asc[0m
+  Rendered books/_form.html.erb (25.4ms)
+  Rendered books/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 44ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+Started POST "/books" for 127.0.0.1 at 2016-03-09 23:57:40 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "book"=>{"photo_url"=>"book.jpg", "title"=>"The Book", "author_id"=>"1", "price"=>"10"}, "commit"=>"Add New Book"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("photo_url", "title", "author_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["photo_url", "book.jpg"], ["title", "The Book"], ["author_id", 1], ["price", 10], ["created_at", "2016-03-10 05:57:40.861691"], ["updated_at", "2016-03-10 05:57:40.861691"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:57:40 -0600
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2016-03-09 23:57:40 -0600
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
