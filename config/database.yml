@@ -23,6 +23,5 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
-
-    run:
-    - "rake db:migrate"
+  run:
+      - "rake db:migrate"

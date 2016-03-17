@@ -1,7 +1,27 @@
 
-<h1>Sign In</h1>
-<%= form_tag do %>
+<!-- <h1>Sign In</h1>
+  <%= form_tag do %>
   <%= label_tag :passcode %>
   <%= text_field_tag :passcode %>
   <%= submit_tag "Sign In" %>
-<% end %>
+  <% end %> -->
+  <div class="col-md-6 col-md-offset-3">
+  <h1>Sign In</h1>
+  <%= form_tag do %>
+    <div class="form-group">
+      <%= label_tag :email %>
+      <%= text_field_tag :email, "", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :password %>
+      <%= password_field_tag :password, "", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag "Sign In", class: "btn btn-primary" %>
+    </div>
+
+  <% end %>
+
+  </div>
