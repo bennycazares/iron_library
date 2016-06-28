@@ -7457,3 +7457,350 @@ Started GET "/sign_in" for ::1 at 2016-03-17 00:20:30 -0500
 Processing by SessionController#new as HTML
   Rendered session/new.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 304ms (Views: 287.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-d31291025a6b734e0b7d44f345d944ae1b6ea6ec0570d9b14d66a207f2454c5f.css?body=1" for ::1 at 2016-04-14 02:55:10 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-04-14 02:55:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-04-14 02:55:10 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 02:55:10 -0500
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 02:55:10 -0500
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 02:55:10 -0500
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:14 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:15 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:15 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:15 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:16 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:16 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:17 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:17 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:17 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:17 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:20 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for ::1 at 2016-04-14 02:55:21 -0500
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 53ms (Views: 32.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:22 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors" for ::1 at 2016-04-14 02:55:23 -0500
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:24 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:24 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for ::1 at 2016-04-14 02:55:25 -0500
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:27 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:27 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/new" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by BooksController#new as HTML
+Redirected to http://localhost:3000/sign_in
+Filter chain halted as #<Proc:0x007fa0d7ca6d20@/Users/Benny/Desktop/theironyard/rails/iron_library/app/controllers/books_controller.rb:3> rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-04-14 02:55:28 -0500
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for ::1 at 2016-04-14 02:55:34 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lbd1HxMxgAf4If5XRlEaVWQl5H2ImPdF3J6VaV2a1w4M2P9UkwscnlYJqmdu7ZV23/47RsUBt7nGaoL3BoN1yw==", "email"=>"benny.cazares@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "benny.cazares@gmail.com"]]
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 29.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sign_in" for ::1 at 2016-04-14 02:55:41 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uqQPkj1J1tLYRD7zTSQE70/6sz8AnljqW+fNG0vLhmKby4XZvXNKS3ZsasNlmIvM9CFsBE0HGBZBE9qFENIkpw==", "email"=>"benny.cazares@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "benny.cazares@gmail.com"]]
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sign_in" for ::1 at 2016-04-14 02:55:42 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5xRUJMMrqfC2FxRn6HrlczwEZGZnHbtfg2ys8Qi/1HHGe95vQxE1aRg/QFfAxmpQh9+7XSqE+6OZmLtvU6Z2tA==", "email"=>"benny.cazares@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "benny.cazares@gmail.com"]]
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:44 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:45 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for ::1 at 2016-04-14 02:55:45 -0500
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/new" for ::1 at 2016-04-14 02:55:46 -0500
+Processing by BooksController#new as HTML
+Redirected to http://localhost:3000/sign_in
+Filter chain halted as #<Proc:0x007fa0d7ca6d20@/Users/Benny/Desktop/theironyard/rails/iron_library/app/controllers/books_controller.rb:3> rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-04-14 02:55:46 -0500
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:47 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:48 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:48 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:48 -0500
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for ::1 at 2016-04-14 02:55:48 -0500
+Processing by SessionController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 02:55:48 -0500
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for ::1 at 2016-04-14 02:55:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Benny/.rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.6ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.0ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/Benny/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.7ms)

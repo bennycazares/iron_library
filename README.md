@@ -1,7 +1,10 @@
 # Iron Library
 
 This application acts as a library storing books and authors. Users have the ability to add, edit, and delete books. The application is styled with bootstrap.
-![Alt text](/Users/Benny/Desktop/theironyard/rails/iron_library/app/assets/images/screenshot.png?raw=true "Optional Title")
+<img width="1278" alt="screen shot 2016-06-28 at 6 24 11 pm" src="https://cloud.githubusercontent.com/assets/17051412/16435732/ba2d2ad4-3d5d-11e6-953b-30abeef4d7d0.png">
+<img width="1276" alt="screen shot 2016-06-28 at 6 24 21 pm" src="https://cloud.githubusercontent.com/assets/17051412/16435735/bdf93464-3d5d-11e6-9d30-b4adbc45534f.png">
+<img width="1274" alt="screen shot 2016-06-28 at 6 24 31 pm" src="https://cloud.githubusercontent.com/assets/17051412/16435738/bf2f7622-3d5d-11e6-808a-a2f670311949.png">
+<img width="1275" alt="screen shot 2016-06-28 at 6 24 43 pm" src="https://cloud.githubusercontent.com/assets/17051412/16435740/c06cabf4-3d5d-11e6-873b-914d7ddd38bf.png">
 
 # License
 The MIT License (MIT)
